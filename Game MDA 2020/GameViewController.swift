@@ -11,20 +11,38 @@ import SceneKit
 
 class GameViewController: UIViewController {
 
+    // MARK: - Stored Properties
+    var scene: SCNScene!
+    
     // MARK: - Methods
-    /// Clone new ship from the scene
+    /// Clones new ship from the scene
     /// - Returns: SCNNode with the new ship
     func getShip() -> SCNNode {
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        
+        // Move ship far away
+        let x = 25
+        let y = 25
+        let z = -105
+        ship.position = SCNVector3(x, y, z)
+        
         return ship.clone()
+    }
+    
+    /// Finds and removes the ship from the scene
+    func removeShip() {
+        scene.rootNode.childNode(withName: "ship", recursively: true)?.removeFromParentNode()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        scene = SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // remove the ship
+        removeShip()
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -75,9 +93,10 @@ class GameViewController: UIViewController {
         
         // Add ship to the scene
         let ship = getShip()
-        scnView.scene?.rootNode.addChildNode(ship)
+        scene.rootNode.addChildNode(ship)
     }
     
+    // MARK: - Actions
     @objc
     func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
