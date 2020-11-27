@@ -54,8 +54,8 @@ class GameViewController: UIViewController {
         ship = scene.rootNode.childNode(withName: "ship", recursively: true)!.clone()
         
         // Move ship far away
-        let x = 25
-        let y = 25
+        let x = Int.random(in: -25 ... 25)
+        let y = Int.random(in: -25 ... 25)
         let z = -105
         ship.position = SCNVector3(x, y, z)
         ship.look(at: SCNVector3(2 * x, 2 * y, 2 * z))
