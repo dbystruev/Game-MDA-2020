@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69513378257148D90015C5CC /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 69513376257148D90015C5CC /* Screenshot02.png */; };
+		69513379257148D90015C5CC /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 69513377257148D90015C5CC /* Screenshot01.png */; };
 		69D10868256FDAFF0060D09C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D10867256FDAFF0060D09C /* AppDelegate.swift */; };
 		69D1086A256FDAFF0060D09C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D10869256FDAFF0060D09C /* art.scnassets */; };
 		69D1086C256FDAFF0060D09C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1086B256FDAFF0060D09C /* GameViewController.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69513376257148D90015C5CC /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
+		69513377257148D90015C5CC /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
 		69D10864256FDAFF0060D09C /* Game MDA 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game MDA 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D10867256FDAFF0060D09C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69D10869256FDAFF0060D09C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6951337B257148DE0015C5CC /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				69513377257148D90015C5CC /* Screenshot01.png */,
+				69513376257148D90015C5CC /* Screenshot02.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		69D1085B256FDAFF0060D09C = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +69,11 @@
 			children = (
 				69D10867256FDAFF0060D09C /* AppDelegate.swift */,
 				69D10869256FDAFF0060D09C /* art.scnassets */,
-				69D1086B256FDAFF0060D09C /* GameViewController.swift */,
-				69D1086D256FDAFF0060D09C /* Main.storyboard */,
 				69D10870256FDB000060D09C /* Assets.xcassets */,
+				69D1086B256FDAFF0060D09C /* GameViewController.swift */,
 				69D10872256FDB000060D09C /* Info.plist */,
+				69D1086D256FDAFF0060D09C /* Main.storyboard */,
+				6951337B257148DE0015C5CC /* Screenshots */,
 			);
 			path = "Game MDA 2020";
 			sourceTree = "<group>";
@@ -124,6 +138,8 @@
 				69D1086A256FDAFF0060D09C /* art.scnassets in Resources */,
 				69D10871256FDB000060D09C /* Assets.xcassets in Resources */,
 				69D1086F256FDAFF0060D09C /* Main.storyboard in Resources */,
+				69513379257148D90015C5CC /* Screenshot01.png in Resources */,
+				69513378257148D90015C5CC /* Screenshot02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
