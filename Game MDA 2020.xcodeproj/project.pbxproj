@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69513378257148D90015C5CC /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = 69513376257148D90015C5CC /* Screenshot02.png */; };
 		69513379257148D90015C5CC /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = 69513377257148D90015C5CC /* Screenshot01.png */; };
+		6951337D257149D40015C5CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6951337C257149D40015C5CC /* README.md */; };
 		69D10868256FDAFF0060D09C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D10867256FDAFF0060D09C /* AppDelegate.swift */; };
 		69D1086A256FDAFF0060D09C /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D10869256FDAFF0060D09C /* art.scnassets */; };
 		69D1086C256FDAFF0060D09C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1086B256FDAFF0060D09C /* GameViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		69513376257148D90015C5CC /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
 		69513377257148D90015C5CC /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
+		6951337C257149D40015C5CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		69D10864256FDAFF0060D09C /* Game MDA 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game MDA 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D10867256FDAFF0060D09C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69D10869256FDAFF0060D09C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		69D1085B256FDAFF0060D09C = {
 			isa = PBXGroup;
 			children = (
+				6951337C257149D40015C5CC /* README.md */,
 				69D10866256FDAFF0060D09C /* Game MDA 2020 */,
 				69D10865256FDAFF0060D09C /* Products */,
 			);
@@ -135,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6951337D257149D40015C5CC /* README.md in Resources */,
 				69D1086A256FDAFF0060D09C /* art.scnassets in Resources */,
 				69D10871256FDB000060D09C /* Assets.xcassets in Resources */,
 				69D1086F256FDAFF0060D09C /* Main.storyboard in Resources */,
