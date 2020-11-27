@@ -12,6 +12,8 @@ import SceneKit
 class GameViewController: UIViewController {
 
     // MARK: - Methods
+    /// Clone new ship from the scene
+    /// - Returns: SCNNode with the new ship
     func getShip() -> SCNNode {
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
         let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
@@ -70,6 +72,10 @@ class GameViewController: UIViewController {
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         scnView.addGestureRecognizer(tapGesture)
+        
+        // Add ship to the scene
+        let ship = getShip()
+        scnView.scene?.rootNode.addChildNode(ship)
     }
     
     @objc
