@@ -36,8 +36,15 @@ class GameViewController: UIViewController {
         button.setTitle("Restart", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
         
+        // Add action to the button
+        button.addTarget(self, action: #selector(newGame), for: .touchUpInside)
+        
         // Add button to the scene
         scnView.addSubview(button)
+    }
+    
+    func addShip() {
+        scene.rootNode.addChildNode(ship)
     }
     
     /// Clones new ship from the scene
@@ -62,6 +69,12 @@ class GameViewController: UIViewController {
         }
         
         return ship
+    }
+    
+    @objc func newGame() {
+        button.isHidden = true
+        ship = getShip()
+        addShip()
     }
     
     /// Finds and removes the ship from the scene
@@ -127,7 +140,7 @@ class GameViewController: UIViewController {
         
         // Add ship to the scene
         let ship = getShip()
-        scene.rootNode.addChildNode(ship)
+        addShip()
         
         // Add button
         addButton()
