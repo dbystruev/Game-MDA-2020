@@ -11,6 +11,13 @@ import SceneKit
 
 class GameViewController: UIViewController {
 
+    // MARK: - Methods
+    func getShip() -> SCNNode {
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        return ship.clone()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,6 +108,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    // MARK: - Computed Properties
     override var shouldAutorotate: Bool {
         return true
     }
