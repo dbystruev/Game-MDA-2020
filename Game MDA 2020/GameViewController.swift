@@ -26,6 +26,10 @@ class GameViewController: UIViewController {
         let y = 25
         let z = -105
         ship.position = SCNVector3(x, y, z)
+        ship.look(at: SCNVector3(2 * x, 2 * y, 2 * z))
+        
+        // Add animation to move the ship to origin
+        ship.runAction(.move(to: SCNVector3(), duration: 5))
         
         return ship.clone()
     }
