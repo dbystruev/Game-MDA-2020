@@ -10,11 +10,34 @@
 import SceneKit
 
 class GameViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    let button = UIButton()
+    
     // MARK: - Stored Properties
     var scene: SCNScene!
+    var scnView: SCNView!
     
     // MARK: - Methods
+    /// Adds a button to the scene view
+    func addButton() {
+        // Button coordinates
+        let midX = scnView.frame.midX
+        let midY = scnView.frame.midY
+        let width: CGFloat = 200
+        let height = CGFloat(100)
+        button.frame = CGRect(x: midX - width / 2, y: midY - height / 2, width: width, height: height)
+        
+        // Configure button
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 15
+        button.setTitle("Restart", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 40)
+        
+        // Add button to the scene
+        scnView.addSubview(button)
+    }
+    
     /// Clones new ship from the scene
     /// - Returns: SCNNode with the new ship
     func getShip() -> SCNNode {
@@ -54,7 +77,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(cameraNode)
         
         // place the camera
-//        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
+        //        cameraNode.position = SCNVector3(x: 0, y: 0, z: 15)
         
         // create and add a light to the scene
         let lightNode = SCNNode()
@@ -71,13 +94,13 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         // retrieve the ship node
-//        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        //        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
         
         // animate the 3d object
-//        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        //        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
         // retrieve the SCNView
-        let scnView = self.view as! SCNView
+        scnView = self.view as? SCNView
         
         // set the scene to the view
         scnView.scene = scene
@@ -98,6 +121,9 @@ class GameViewController: UIViewController {
         // Add ship to the scene
         let ship = getShip()
         scene.rootNode.addChildNode(ship)
+        
+        // Add button
+        addButton()
     }
     
     // MARK: - Actions
@@ -153,5 +179,5 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    
 }
