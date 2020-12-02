@@ -3,6 +3,15 @@
 Game example for Moscow Digital Academy Students.
 
 ## Video
+
+### 26 Nov 2020
+[ios.m-d-a.ru/261120](https://ios.m-d-a.ru/261120)
+
+[![2,5 часа](http://img.youtube.com/vi/Y8ySCTILnFM/0.jpg)](https://www.youtube.com/watch?v=Y8ySCTILnFM)
+
+### 27 Nov 2020
+[ios.m-d-a.ru/271120](https://ios.m-d-a.ru/271120)
+
 [![3 часа](http://img.youtube.com/vi/JxnQgZZAwmA/0.jpg)](https://www.youtube.com/watch?v=JxnQgZZAwmA)
 
 ## Installation
